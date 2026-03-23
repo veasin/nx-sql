@@ -1,0 +1,27 @@
+{
+  "name": "veasin/nx-sql",
+  "description": "sql builder for nx",
+  "homepage": "https://github.com/veasin/nx",
+  "type": "framework",
+  "authors": [
+    {
+      "name": "Vea",
+      "email": "vea@live.cn"
+    }
+  ],
+  "require": {
+    "php": ">=8.4",
+    "ext-pdo": "*"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "nx\\helpers\\": [
+        "src/"
+      ]
+    }
+  },
+  "require-dev": {
+    "veasin/nx-tiny":">=0.0.1"
+  }
+}
