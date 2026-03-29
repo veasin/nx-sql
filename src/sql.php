@@ -16,11 +16,11 @@ class sql implements \ArrayAccess{
 	const string
 		JOIN_INNER = 'INNER', JOIN_CROSS = 'CROSS', JOIN_STRAIGHT = 'STRAIGHT', JOIN_LEFT = 'LEFT', JOIN_RIGHT = 'RIGHT', JOIN_NATURAL = 'NATURAL';
 	protected(set) ?string $dialect=null;
-	public array $params = [];//执行参数
+	protected(set) array $params = [];//执行参数
 	protected(set) mixed $select = null;
 	protected array $where = [], $join = [], $having = [], $set = [], $options = [];
 	protected ?array $limit = null, $sort = null, $group = null;
-	protected string $action = 'select';
+	protected(set) string $action = 'select';
 	public static ?sql $current = null;
 	protected \WeakMap|null $joinSQL = null;
 	public function __construct(protected(set) table $table){}
